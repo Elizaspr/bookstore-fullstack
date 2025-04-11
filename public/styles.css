@@ -1,0 +1,61 @@
+.product-grid { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product {
+    width: 30;
+    text-align: center;
+}
+.product img {
+    width: 100;
+    height:auto;
+    max-width: 150px;
+}
+body{
+    background-color: #f4efea
+}
+
+header{
+    border: 6px solid #957e5b;
+}
+
+p{
+    color: #30431d; 
+}
+h1{
+    font-size: 40pt;
+    text-align: center;
+    color: #30431d; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,; 
+
+}
+
+ul{
+    color: #30431d; 
+}
+
+h2{
+    color: #5C4033; 
+}
+
+h3{
+    font-size: 20pt; 
+    color:#957e5b;
+    font-weight: bold;
+    text-decoration: underline;
+    
+}
+
+
+h4{ 
+    color:#30431d; 
+    font-family: Georgia; 
+}
+
+.cart-items img { 
+ width: 60px; 
+ height: auto; 
+ border-radius: 5px;
+}
+
