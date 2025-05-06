@@ -3,84 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Book Café</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-     
-<header>
+    <header>
         <h1>Book Café</h1>
     </header>
 
-<nav>
+    <nav>
         <ul> 
-            <li><a href= "index.html" > Home </a></li>
-            <li><a href= #>Sign in </a></li>
-            <li><a href= "cart.html"> View Cart </a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="cart.html">View Cart</a></li>
         </ul>
     </nav> 
 
+    <main> 
+        <h2>Freshly Brewed Stories:</h2>
 
-<main> 
-<h2> Freshly Brewed Stories: </h2>
+        <!-- Search and Category Filter -->
+        <div>
+            <form id="searchform">
+            <input type="text" id="search" placeholder="Search for books" />
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="fiction">Fiction</option>
+                <option value="non-fiction">Non-Fiction</option>
+                <option value="children">Children's Books</option>
+            </select>
+            <button type="submit">Search</button>
+            </form>
+        </div>
 
-<section class ="category"> 
-<h3> Fantasy</h3>
-<div class="product-grid">
-<div class ="product"> 
-    <img src="images/Sunrise.webp" alt="Sunrise"> 
-    <h4> Sunrise on the Reaping</h4>
-    <p>$21.99</p>
-    <a href ="details.html"> View Details (Functional) </a>
-</div>
+        <!-- Fiction Category -->
+        <section class="category" id="fiction-category">
+            <h3>Fiction</h3>
+            <div class="product-grid" id="fiction-products">
+                <div class="product">
+                    <img src="images/Sunrise.webp" alt="Sunrise">
+                    <h4>Sunrise on the Reaping</h4>
+                    <p>$21.99</p>
+                    <a href="details.html?id=1">View Details</a>
+                </div>
 
-<div class="product">
-<img src ="images/Quicksilver.webp" alt="Quicksilver">
-<h4>Quicksilver</h4>
-<p>$18.99</p>
-<a href=# >View details </a>
-</div>
+                <div class="product">
+                    <img src="images/Quicksilver.webp" alt="Quicksilver">
+                    <h4>Quicksilver</h4>
+                    <p>$18.99</p>
+                    <a href="details.html?id=2">View Details</a>
+                </div>
 
-<div class="product">
-<img src="images/Bonded.webp" alt ="Bonded">
-<h4> Bonded in Death</h4>
-<p> $21.00</p>
-</section>
+                <div class="product">
+                    <img src="images/Bonded.webp" alt="Bonded">
+                    <h4>Bonded in Death</h4>
+                    <p>$21.00</p>
+                    <a href="details.html?id=3">View Details</a>
+                </div>
+            </div>
+        </section>
 
+        <!-- Non-Fiction Category -->
+        <section class="category" id="non-fiction-category">
+            <h3>Non-Fiction</h3>
+            <div class="product-grid" id="non-fiction-products">
+                <div class="product">
+                    <img src="images/King.webp" alt="King">
+                    <h4>King: A Life</h4>
+                    <p>$20.00</p>
+                    <a href="details.html?id=4">View Details</a>
+                </div>
 
+                <div class="product">
+                    <img src="images/Lily's promise.webp" alt="Lily">
+                    <h4>Lily's Promise: Holding on to Hope</h4>
+                    <p>$17.99</p>
+                    <a href="details.html?id=5">View Details</a>
+                </div>
 
+                <div class="product">
+                    <img src="images/Atomic.webp" alt="Atomic">
+                    <h4>Atomic Habits</h4>
+                    <p>$22.00</p>
+                    <a href="details.html?id=6">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; Book Café! Read, Sip, & Enjoy!</p>
+    </footer>
 
-<section class="category">
-<h3> Non-Fiction </h3>
-<div class="product-grid"></div> 
-
-<div class = "product"> 
-<img src="images/King.webp" alt ="King"> 
-<h4>King: A Life</h4>
-<p>$20.00</p>
-<a href=# >View details </a>
-</div>
-
-<div class="product">
-<img src="images/Lily's promise.webp" alt="Lily">
-<h4>Lily's Promise: Holding on to Hope</h4>
-<p>$17.99</p>
-</div> 
-
-<div class="product">
-<img src= "images/Atomic.webp" alt="Atomic">
-<h4>Atomic Habits</h4>
-<p>$22.00</p>    
-</div>
-
-
-</main>
-
-
-<footer>
-
-    <p> &copy; Book Cafe! Read, Sip, & Enjoy!
-        </footer>
+    <script src="products.js"></script>
 </body>
 </html>

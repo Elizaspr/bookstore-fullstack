@@ -3,63 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart </title>
-    <link rel = "stylesheet" href="styles.css">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-    
-<header> 
-<h1> Book Cafe </h1>
-<nav> 
-    <ul> 
-       <li> <a href = "index.html" > Home </a></li>
-       <li> <a href = "products.html" > Books </a</li>
-       <li> <a href = "#" > Sign In</a></li>
-</ul>
-   </nav>
-</header>
- 
-<main> 
-<h2> My Cart: </h2>
+    <header>
+        <h1>Book Café - Your Cart</h1>
+    </header>
 
-<div class = cart-items>
-    <h4> Sunrise on the Reaping </h4>
-    <img src = "images/Sunrise.webp" alt =" Sunrise"> 
-     <p> Price: 21.99 </p>
-     <label> Quantity <input type="number" value = "2"></label>
-     <p> Total: 43.98 </p>
-     <button> Remove </button>   
-</div>
+    <nav>
+        <ul> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+        </ul>
+    </nav>
 
-<div class = cart-items>
-    <h4> Atomic Habits</h4>
-    <img src = "images/Atomic.webp" alt =" Sunrise"> 
-     <p> Price: 22.00 </p>
-     <label> Quantity <input type="number" value = "1"></label>
-     <p> Total: 22.00 </p>
-     <button> Remove </button>   
-</div>
+    <main>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button id="checkout-button">Checkout</button>
+    </main>
 
-<section class="cart-summary">
-    <h3>Subtotal: $65.98</h3>
-    <h3>Tax (6.75%): $4.45</h3>
-    <h3>Total: $70.43</h3>
-    <button>Proceed to Checkout</button>
-</section>
+    <footer>
+        <p>&copy; Book Café! Read, Sip, & Enjoy!</p>
+    </footer>
 
+    <!-- Include cart.js -->
+    <script src="cart.js"></script>
 
+    <script>
+        // Assuming userId is stored in session or passed to the page
+        const userId = 1; // You should dynamically set this value
 
- <main>    
-
-
-
-
-
-
-
-
-
-<footer> 
-</footer>
+        // Load cart when the page loads
+        window.onload = function() {
+            loadCart(userId);
+            
+            // Checkout button functionality
+            document.getElementById('checkout-button').addEventListener('click', function() {
+                checkoutCart(userId);
+            });
+        };
+    </script>
 </body>
 </html>
